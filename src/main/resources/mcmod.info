@@ -1,0 +1,16 @@
+[
+{
+  "modid": "shogyomujo",
+  "name": "Shogyomujo Mod",
+  "description": "shogyomujo",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["gedorinku", "winjii"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
