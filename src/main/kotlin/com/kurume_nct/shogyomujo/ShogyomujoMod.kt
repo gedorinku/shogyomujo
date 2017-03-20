@@ -1,12 +1,20 @@
 package com.kurume_nct.shogyomujo
 
 import net.minecraft.init.Blocks
+import net.minecraftforge.common.MinecraftForge
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.Mod.EventHandler
 import net.minecraftforge.fml.common.event.FMLInitializationEvent
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent
 
 @Mod(modid = ShogyomujoMod.MODID, version = ShogyomujoMod.VERSION)
 class ShogyomujoMod {
+
+    @EventHandler
+    fun preInit(event: FMLPreInitializationEvent) {
+        MinecraftForge.EVENT_BUS.register(ExplosionEventHandler())
+        MinecraftForge.EVENT_BUS.register(WorldEventHandler())
+    }
 
     @EventHandler
     fun init(event: FMLInitializationEvent) {
