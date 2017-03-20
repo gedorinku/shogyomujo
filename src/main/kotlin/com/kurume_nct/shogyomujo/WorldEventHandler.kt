@@ -22,6 +22,8 @@ class WorldEventHandler {
         val creeper = EntityList.createEntityByID(EntityList.getID(EntityCreeper::class.java), world) as EntityCreeper
         creeper.setLocationAndAngles(targetPlayer.posX, targetPlayer.posY + 5, targetPlayer.posZ, 0.0f, 0.0f)
 
+        creeper.tags.add(ShogyomujoMod.MOB_TAG)
+
         world.spawnEntity(creeper)
     }
 }
