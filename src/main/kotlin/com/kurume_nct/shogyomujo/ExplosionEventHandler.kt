@@ -17,7 +17,7 @@ class ExplosionEventHandler {
         val world = event.world
         if (exploder !is EntityCreeper ||
                 world.isRemote ||
-                !exploder.tags.contains(ShogyomujoMod.MOB_TAG)) return
+                ShogyomujoMod.MOB_TAG !in exploder.tags) return
 
         val random = world.rand
 
