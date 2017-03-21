@@ -1,6 +1,5 @@
 package com.kurume_nct.shogyomujo
 
-import net.minecraft.entity.EntityList
 import net.minecraft.entity.monster.EntityCreeper
 import net.minecraftforge.event.world.WorldEvent
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent
@@ -21,8 +20,7 @@ class WorldEventHandler {
 
         val creeper = EntityCreeper(world)
         creeper.setLocationAndAngles(targetPlayer.posX, targetPlayer.posY + 5, targetPlayer.posZ, 0.0f, 0.0f)
-
-        creeper.tags.add(ShogyomujoMod.MOB_TAG)
+        creeper.hasArrows = true
 
         world.spawnEntity(creeper)
     }
