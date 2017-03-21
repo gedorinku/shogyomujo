@@ -16,12 +16,6 @@ class ShogyomujoMod {
         MinecraftForge.EVENT_BUS.register(WorldEventHandler())
     }
 
-    @EventHandler
-    fun init(event: FMLInitializationEvent) {
-        // some kurume_nct code
-        println("DIRT BLOCK >> " + Blocks.DIRT.unlocalizedName)
-    }
-
     companion object {
         const val MODID = "shogyomujo"
         const val VERSION = "1.0"
